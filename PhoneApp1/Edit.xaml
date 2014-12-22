@@ -1,0 +1,139 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp1.Edit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" 
+                    Margin="12,17,0,28">
+            <TextBlock Text="Create Your Own Routine" 
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       FontSize="29.333" 
+                       TextAlignment="Center"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" 
+              Grid.Row="1"
+              Margin="12,0,12,0" 
+              Background="#FF88B255">
+            <Button x:Name="btnStartNew"
+                    Content="Start" 
+                    HorizontalAlignment="Center"
+                    Height="68" 
+                    Margin="0,552,0,0" 
+                    VerticalAlignment="Top"
+                    Width="180"/>
+            
+            <TextBlock HorizontalAlignment="Left"
+                       Height="49" 
+                       Margin="10,90,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Prepare:" 
+                       VerticalAlignment="Top" 
+                       Width="130"/>
+            <TextBlock HorizontalAlignment="Left" 
+                       Height="53"
+                       Margin="10,190,0,0"
+                       TextWrapping="Wrap" 
+                       Text="Work:" 
+                       VerticalAlignment="Top" 
+                       Width="130"/>
+            <TextBlock HorizontalAlignment="Left"
+                       Height="49" 
+                       Margin="10,284,0,0"
+                       TextWrapping="Wrap"
+                       Text="Rest:" 
+                       VerticalAlignment="Top" 
+                       Width="130"/>
+            <TextBlock HorizontalAlignment="Left"
+                       Height="49"
+                       Margin="10,396,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Cycles:" 
+                       VerticalAlignment="Top"
+                       Width="130"/>
+            <TextBlock x:Name="txtblEditPrepare" 
+                       HorizontalAlignment="Left"
+                       Height="49"
+                       Margin="273,90,0,0"
+                       TextWrapping="Wrap"
+                       Text="00:00"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Width="86"/>
+            <TextBlock x:Name="txtblEditWork"
+                       HorizontalAlignment="Left"
+                       Height="49" 
+                       Margin="273,194,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="00:00"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top" 
+                       Width="86"/>
+            <TextBlock x:Name="txtblEditRest" 
+                       HorizontalAlignment="Left" 
+                       Height="49" 
+                       Margin="273,284,0,0"
+                       TextWrapping="Wrap"
+                       Text="00:00" 
+                       TextAlignment="Center"
+                       VerticalAlignment="Top" 
+                       Width="86"/>
+            <TextBlock x:Name="txtblEditCycles"
+                       HorizontalAlignment="Left" 
+                       Height="49" 
+                       Margin="273,396,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="00:00" 
+                       TextAlignment="Center"
+                       VerticalAlignment="Top" 
+                       Width="86"/>
+            
+            <Button x:Name="btnAdd"
+                    Content=""
+                    HorizontalAlignment="Left"
+                    Height="67" 
+                    Margin="187,85,0,0"
+                    VerticalAlignment="Top" 
+                    Width="72" BorderThickness="0">
+            	<Button.Background>
+            		<ImageBrush Stretch="Uniform" 
+                                ImageSource="Assets/circle-add-128.png"/>
+            	</Button.Background>
+            </Button>
+            
+            <Button x:Name="btnSubtract"
+                    Content="" 
+                    HorizontalAlignment="Left"
+                    Height="77"
+                    Margin="373,80,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="73" BorderThickness="0">
+            	<Button.Background>
+            		<ImageBrush Stretch="Uniform" 
+                                ImageSource="Assets/minus-5-128.png"/>
+            	</Button.Background>
+            </Button>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
