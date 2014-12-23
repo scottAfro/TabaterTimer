@@ -30,15 +30,15 @@ namespace PhoneApp1
             milllisecond = 0;
             endPrep = 10;
             endRound = 20;
-            //rounds = 8;
+            rounds = 9;
             counter = 0;
         }
 
         private void btnBegin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             
-            if(btnBegin.Content.ToString() == "Begin")
-            {
+            //if(btnBegin.Content.ToString() == "Begin")
+            //{
                 //timerWatch.Start();
                 //timer = new DispatcherTimer();
                 //timer.Interval = new TimeSpan(0, 0, 0, 1, 0);       
@@ -47,22 +47,21 @@ namespace PhoneApp1
                 //btnPause.Visibility = System.Windows.Visibility.Visible;
 
                 //Need to start a counter for each round(8)
-                for (rounds = 0; rounds < 9; rounds++) // or if()if the timer = 10 seconds + rounds < 9                
+                for (i = 0; i < rounds; i++) // or if()if the timer = 10 seconds + rounds < 9                
                 {
                     timerWatch.Start();
                     timer = new DispatcherTimer();
-                    timer.Interval = new TimeSpan(0, 0, 0, 1, 0);                   
+                    timer.Interval = new TimeSpan(0, 0, 0, 1, 0);
                     timer.Tick += timer_Tick;
                     timer.Start();
-                    btnPause.Visibility = System.Windows.Visibility.Visible;
-                    counter = rounds;
-                    txtblRoundNo.Text = counter.ToString();
-                }
-            }
-            else
-            {
-                 timerWatch.Stop();
-            }
+                    btnPause.Visibility = System.Windows.Visibility.Visible;                    
+                    txtblRoundNo.Text = i.ToString();
+              }
+            //}
+            //else
+            //{
+            //     timerWatch.Stop();
+            //}
             
         }//end of btnBegin
 
