@@ -34,6 +34,7 @@
         <Grid x:Name="ContentPanel"
               Grid.Row="1"
               Margin="14,0,10,0">
+            
             <Button x:Name="btnBegin"
                     Content="Begin"
                     HorizontalAlignment="Center"
@@ -70,11 +71,11 @@
             <TextBlock x:Name="txtblRest"
                        HorizontalAlignment="Center"
                        Height="73"
-                       Margin="10,81,0,0"                       
+                       Margin="141,29,139,0"                       
                        TextWrapping="Wrap"
                        Text="Rest!" 
                        VerticalAlignment="Top"
-                       Width="268" 
+                       Width="176" 
                        TextAlignment="Center" 
                        FontSize="48" 
                        Visibility="Collapsed"/>
@@ -90,40 +91,40 @@
                     Visibility="Collapsed"/>
 
             <Button x:Name="btnStop_Copy"
-            	Content="Pause"
-            	HorizontalAlignment="Center"
-            	Height="74"
-            	Margin="242,444,30,0"
-            	VerticalAlignment="Top" 
-            	Width="184"
-            	Tap="btnStop_Tap"
-            	Visibility="Visible"/>
+            	    Content="Pause"
+            	    HorizontalAlignment="Center"
+            	    Height="74"
+            	    Margin="242,444,30,0"
+            	    VerticalAlignment="Top" 
+            	    Width="184"
+            	    Tap="btnStop_Tap"
+            	    Visibility="Visible"/>
 
             <TextBlock x:Name="txtblLable"
-            	HorizontalAlignment="Center"
-            	Height="73"
-            	Margin="10,81,0,0"                       
-            	TextWrapping="Wrap"
-            	Text="GO!" 
-            	VerticalAlignment="Top"
-            	Width="268" 
-                TextAlignment="Center" 
-                FontSize="48"
-                Visibility="Collapsed"/>
-            
+                       HorizontalAlignment="Center"
+                       Height="73"
+                       Margin="10,81,0,0"                       
+                       TextWrapping="Wrap"
+                       Text="GO!" 
+                       VerticalAlignment="Top"
+                       Width="268" 
+                       TextAlignment="Center" 
+                       FontSize="48"
+                       Visibility="Collapsed"/>
+
             <TextBlock HorizontalAlignment="Left"
                        Height="63" 
-                       Margin="205,173,0,0" 
+                       Margin="160,173,0,0" 
                        TextWrapping="Wrap" 
                        Text="of 8 Rounds"
                        VerticalAlignment="Top" 
                        Width="180"
                        FontSize="34"/>
-            
+
             <TextBlock x:Name="txtblRoundNo"
                        HorizontalAlignment="Left"
                        Height="48" 
-                       Margin="163,173,0,0" 
+                       Margin="118,173,0,0" 
                        TextWrapping="Wrap" 
                        Text=" "
                        FontSize="34"
@@ -131,6 +132,18 @@
                        Width="37"
                        RenderTransformOrigin="0.486,0.563"/>
             
+            <TextBlock x:Name="txtblGo"
+                       HorizontalAlignment="Left"
+                       Height="70"
+                       Margin="141,32,0,0"
+                       TextWrapping="Wrap" 
+                       Text="Go!" 
+                       VerticalAlignment="Top" 
+                       Width="199"
+                       TextAlignment="Center"
+                       FontSize="48"
+                       Visibility="Collapsed"/>
+
             <!--<ProgressBar x:Name="progressBar1"
                          HorizontalAlignment="Left" 
                          Height="40" 
