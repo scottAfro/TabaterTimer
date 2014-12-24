@@ -104,6 +104,9 @@
     <Compile Include="Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditPageTimer.xaml.cs">
+      <DependentUpon>EditPageTimer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditPageTimer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

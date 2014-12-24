@@ -32,7 +32,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" 
               Grid.Row="1"
-              Margin="12,0,12,0" 
+              Margin="10,0,14,0" 
               Background="#FF88B255">
             <Button x:Name="btnStartNew"
                     Content="Start" 
@@ -40,7 +40,7 @@
                     Height="68" 
                     Margin="0,552,0,0" 
                     VerticalAlignment="Top"
-                    Width="180"/>
+                    Width="180" Click="btnStartNew_Click"/>
             
             <TextBlock HorizontalAlignment="Left"
                        Height="49" 
@@ -97,16 +97,7 @@
                        TextAlignment="Center"
                        VerticalAlignment="Top" 
                        Width="86"/>
-            <TextBlock x:Name="txtblEditCycles"
-                       HorizontalAlignment="Left" 
-                       Height="49" 
-                       Margin="273,396,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="00:00" 
-                       TextAlignment="Center"
-                       VerticalAlignment="Top" 
-                       Width="86"/>
-            
+
             <Button x:Name="btnAdd"
                     Content=""
                     HorizontalAlignment="Left"
@@ -132,8 +123,28 @@
                                 ImageSource="Assets/minus-5-128.png"/>
             	</Button.Background>
             </Button>
+            <Slider x:Name="sliderCycles"
+                    HorizontalAlignment="Left"
+                    Height="97" 
+                    Margin="52,455,0,0" 
+                    VerticalAlignment="Top"                    
+                    Width="326" 
+                    Minimum="1"
+                    Maximum="10"                    
+                    Value="8"                    
+                    ValueChanged="Slider_ValueChanged"/>
+            
+            <TextBox x:Name="txtSliderValue"
+                     HorizontalAlignment="Left" 
+                     Height="67" 
+                     Margin="120,378,0,0"
+                     TextWrapping="Wrap"
+                     Text="{Binding Value, ElementName=sliderCycles}"
+                     VerticalAlignment="Top" 
+                     Width="80"
+                     IsReadOnly="True"
+                     Opacity="100"/>
 
         </Grid>
     </Grid>
-
 </phone:PhoneApplicationPage>
