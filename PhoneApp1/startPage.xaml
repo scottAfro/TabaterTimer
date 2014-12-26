@@ -50,7 +50,7 @@
                        Height="86"
                        Margin="58,241,51,0" 
                        TextWrapping="Wrap" 
-                       Text="00:00"
+                       Text=" "
                        VerticalAlignment="Top"
                        Width="347" 
                        FontSize="64"

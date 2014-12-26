@@ -79,8 +79,8 @@
 				Width="211"				
                 Click="btnEdit_Click"/>
             
-            <Button x:Name="btnOption"
-                    Content="Options"
+            <Button x:Name="btnMusic"
+                    Content="Music"
                     HorizontalAlignment="Left"
                     Height="195"
                     Margin="235,319,0,0"

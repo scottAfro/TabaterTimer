@@ -12,7 +12,6 @@ namespace PhoneApp1
 {
     public partial class Edit : PhoneApplicationPage
     {
-
         TimeSpan prepDuration = new TimeSpan(0, 0, 0, 10);
         TimeSpan workDuration = new TimeSpan(0, 0, 0, 20);
         TimeSpan restDuration = new TimeSpan(0, 0, 0, 10);
