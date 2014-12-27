@@ -21,14 +21,128 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0"
+                    Margin="12,17,0,28">
+            <TextBlock Text="Tabata Timer"
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="My Tabata"
+                       TextAlignment="Center"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1" Margin="12,0,12,0">
 
+            <Button x:Name="btnBegin"
+                    Content="Begin"
+                    HorizontalAlignment="Center"
+                    Height="74"
+                    Margin="41,444,231,0"
+                    VerticalAlignment="Top" 
+                    Width="184"
+                    Tap="btnEditBegin_Tap"
+                    Visibility="Visible"/>
+
+            <TextBlock x:Name="txtblEditTime"
+                       HorizontalAlignment="Center" 
+                       Height="86"
+                       Margin="58,241,51,0" 
+                       TextWrapping="Wrap" 
+                       Text=" "
+                       VerticalAlignment="Top"
+                       Width="347" 
+                       FontSize="64"
+                       TextAlignment="Center"/>
+
+            <TextBlock x:Name="txtblPrepare"
+                       HorizontalAlignment="Center"
+                       Height="73"
+                       Margin="99,29,89,0"                       
+                       TextWrapping="Wrap"
+                       Text="Prepare!" 
+                       VerticalAlignment="Top"
+                       Width="268" 
+                       TextAlignment="Center" 
+                       FontSize="48" 
+                       Visibility="Visible"/>
+
+            <TextBlock x:Name="txtblRest"
+                       HorizontalAlignment="Center"
+                       Height="73"
+                       Margin="141,29,139,0"                       
+                       TextWrapping="Wrap"
+                       Text="Rest!" 
+                       VerticalAlignment="Top"
+                       Width="176" 
+                       TextAlignment="Center" 
+                       FontSize="48" 
+                       Visibility="Collapsed"/>
+
+            <Button x:Name="btnPause"
+                    Content="Stop" 
+                    HorizontalAlignment="Left" 
+                    Height="81" 
+                    Margin="146,523,0,0"
+                    VerticalAlignment="Top"
+                    Width="171"
+                    Tap="btnEditPause_Tap"
+                    Visibility="Collapsed"/>
+
+            <Button x:Name="btnStop_Copy"
+            	    Content="Pause"
+            	    HorizontalAlignment="Center"
+            	    Height="74"
+            	    Margin="242,444,30,0"
+            	    VerticalAlignment="Top" 
+            	    Width="184"
+            	    Tap="btnEditStop_Tap"
+            	    Visibility="Visible"/>
+
+            <TextBlock x:Name="txtblLable"
+                       HorizontalAlignment="Center"
+                       Height="73"
+                       Margin="10,81,0,0"                       
+                       TextWrapping="Wrap"
+                       Text="GO!" 
+                       VerticalAlignment="Top"
+                       Width="268" 
+                       TextAlignment="Center" 
+                       FontSize="48"
+                       Visibility="Collapsed"/>
+
+            <TextBlock HorizontalAlignment="Left"
+                       Height="63" 
+                       Margin="160,173,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="of 8 Rounds"
+                       VerticalAlignment="Top" 
+                       Width="180"
+                       FontSize="34"/>
+
+            <TextBlock x:Name="txtblEditRoundNo"
+                       HorizontalAlignment="Left"
+                       Height="48" 
+                       Margin="123,173,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="1"
+                       FontSize="34"
+                       VerticalAlignment="Top"
+                       Width="37"
+                       RenderTransformOrigin="0.486,0.563"/>
+
+            <TextBlock x:Name="txtblGo"
+                       HorizontalAlignment="Left"
+                       Height="70"
+                       Margin="141,32,0,0"
+                       TextWrapping="Wrap" 
+                       Text="Go!" 
+                       VerticalAlignment="Top" 
+                       Width="199"
+                       TextAlignment="Center"
+                       FontSize="48"
+                       Visibility="Collapsed"/>
         </Grid>
     </Grid>
 

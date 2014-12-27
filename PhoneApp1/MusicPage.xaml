@@ -34,12 +34,34 @@
               Grid.Row="1"
               Margin="12,0,12,0">
 
-            <!--<StackPanel Orientation="Horizontal" Width="Auto" Margin="73,50,74,0" VerticalAlignment="Top">
-                <Button Content="|&lt;&lt;" x:Name="prevButton" Height="100" Width="100" Click="prevButton_Click"/>
-                <Button Content="&gt;" x:Name="playButton" Height="100" Width="100" Click="playButton_Click"/>
-                <Button Content="&gt;&gt;|" x:Name="nextButton" Height="100" Width="100" Click="nextButton_Click"/>
-            </StackPanel>-->
-
+            <!--<StackPanel Orientation="Horizontal"
+                        Width="Auto"
+                        Margin="73,50,74,0" 
+                        VerticalAlignment="Top">
+                <Button x:Name="prevButton" 
+                        Content="|&lt;&lt;"                         
+                        Height="100"
+                        Width="100"
+                        Click="prevButton_Click"/>
+                <Button x:Name="playButton"
+                        Content="&gt;" 
+                        Height="100" 
+                        Width="100" 
+                        Click="playButton_Click"/>
+                <Button x:Name="nextButton"
+                        Content="&gt;&gt;|"
+                        Height="100"
+                        Width="100" 
+                        Click="nextButton_Click"/>
+            </StackPanel>
+            <TextBlock x:Name="txtCurrentTrack"
+                       Height="300"
+                       HorizontalAlignment="Left" 
+                       Margin="82,193,0,0" 
+                       VerticalAlignment="Top" 
+                       Width="300"
+                       TextWrapping="Wrap"/>-->
+                       
         </Grid>
     </Grid>
 

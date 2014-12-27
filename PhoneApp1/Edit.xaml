@@ -37,16 +37,19 @@
             <Button x:Name="btnStartNew"
                     Content="Start" 
                     HorizontalAlignment="Center"
-                    Height="68" 
-                    Margin="0,552,0,0" 
+                    Height="82" 
+                    Margin="138,552,138,0" 
                     VerticalAlignment="Top"
-                    Width="180" Click="btnStartNew_Click"/>
-            
+                    Width="180" 
+                    FontSize="28"
+                    Click="btnStartNew_Click"/>
+
             <TextBlock HorizontalAlignment="Left"
                        Height="49" 
                        Margin="10,90,0,0" 
                        TextWrapping="Wrap" 
-                       Text="Prepare:" 
+                       Text="Prepare:"
+                       FontSize="28"
                        VerticalAlignment="Top" 
                        Width="130"/>
             <TextBlock HorizontalAlignment="Left" 
@@ -54,6 +57,7 @@
                        Margin="10,190,0,0"
                        TextWrapping="Wrap" 
                        Text="Work:" 
+                       FontSize="28"
                        VerticalAlignment="Top" 
                        Width="130"/>
             <TextBlock HorizontalAlignment="Left"
@@ -61,6 +65,7 @@
                        Margin="10,284,0,0"
                        TextWrapping="Wrap"
                        Text="Rest:" 
+                       FontSize="28"
                        VerticalAlignment="Top" 
                        Width="130"/>
             <TextBlock HorizontalAlignment="Left"
@@ -68,61 +73,13 @@
                        Margin="10,396,0,0" 
                        TextWrapping="Wrap" 
                        Text="Cycles:" 
+                       FontSize="28"
                        VerticalAlignment="Top"
                        Width="130"/>
-            <TextBlock x:Name="txtblEditPrepare" 
-                       HorizontalAlignment="Left"
-                       Height="49"
-                       Margin="273,90,0,0"
-                       TextWrapping="Wrap"
-                       Text="00:00"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Width="86"/>
-            <TextBlock x:Name="txtblEditWork"
-                       HorizontalAlignment="Left"
-                       Height="49" 
-                       Margin="273,194,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="00:00"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top" 
-                       Width="86"/>
-            <TextBlock x:Name="txtblEditRest" 
-                       HorizontalAlignment="Left" 
-                       Height="49" 
-                       Margin="273,284,0,0"
-                       TextWrapping="Wrap"
-                       Text="00:00" 
-                       TextAlignment="Center"
-                       VerticalAlignment="Top" 
-                       Width="86"/>
 
-            <Button x:Name="btnAdd"
-                    Content=""
-                    HorizontalAlignment="Left"
-                    Height="67" 
-                    Margin="187,85,0,0"
-                    VerticalAlignment="Top" 
-                    Width="72" BorderThickness="0">
-            	<Button.Background>
-            		<ImageBrush Stretch="Uniform" 
-                                ImageSource="Assets/circle-add-128.png"/>
-            	</Button.Background>
-            </Button>
-            
-            <Button x:Name="btnSubtract"
-                    Content="" 
-                    HorizontalAlignment="Left"
-                    Height="77"
-                    Margin="373,80,0,0" 
-                    VerticalAlignment="Top" 
-                    Width="73" BorderThickness="0">
-            	<Button.Background>
-            		<ImageBrush Stretch="Uniform" 
-                                ImageSource="Assets/minus-5-128.png"/>
-            	</Button.Background>
-            </Button>
+
+
+
             <Slider x:Name="sliderCycles"
                     HorizontalAlignment="Left"
                     Height="97" 
@@ -133,17 +90,69 @@
                     Maximum="10"                    
                     Value="8"                    
                     ValueChanged="Slider_ValueChanged"/>
-            
+
             <TextBox x:Name="txtSliderValue"
                      HorizontalAlignment="Left" 
                      Height="67" 
-                     Margin="120,378,0,0"
+                     Margin="145,378,0,0"
                      TextWrapping="Wrap"
                      Text="{Binding Value, ElementName=sliderCycles}"
                      VerticalAlignment="Top" 
                      Width="80"
                      IsReadOnly="True"
                      Opacity="100"/>
+
+            <TextBox x:Name="txtPrepare"
+                     HorizontalAlignment="Left" 
+                     Height="75"
+                     Margin="145,65,0,0"
+                     TextWrapping="Wrap" 
+                     Text=" "
+                     VerticalAlignment="Top"
+                     Width="118"/>
+
+            <TextBox x:Name="txtWork"
+                    HorizontalAlignment="Left" 
+            	    Height="75"
+            	    Margin="145,168,0,0"
+            	    TextWrapping="Wrap" 
+            	    Text=" "
+            	    VerticalAlignment="Top"
+            	    Width="118"/>
+
+            <TextBox x:Name="txtRest" 
+                    HorizontalAlignment="Left" 
+            	    Height="75"
+            	    Margin="145,259,0,0"
+            	    TextWrapping="Wrap" 
+            	    Text=" "
+            	    VerticalAlignment="Top"
+            	    Width="118"/>
+
+            <TextBlock  HorizontalAlignment="Left"
+                        Height="49"
+                        Margin="263,91,0,0"
+                        TextWrapping="Wrap" 
+                        Text="Seconds" 
+                        FontSize="28"
+                        VerticalAlignment="Top" 
+                        Width="178"/>
+            <TextBlock FontSize="28"
+                        HorizontalAlignment="Left"
+                        Height="49" 
+                        Margin="263,190,0,0" 
+                        TextWrapping="Wrap"
+                        Text="Seconds"
+                        VerticalAlignment="Top"
+                        Width="178"/>
+            <TextBlock FontSize="28"
+                        HorizontalAlignment="Left"
+                        Height="49"
+                        Margin="263,284,0,0" 
+                        TextWrapping="Wrap" 
+                        Text="Seconds"
+                        VerticalAlignment="Top"
+                        Width="178"/>
 
         </Grid>
     </Grid>

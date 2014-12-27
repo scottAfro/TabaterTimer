@@ -27,7 +27,7 @@ namespace PhoneApp1
             minute = 0;
             second = 0;
             milllisecond = 0;            
-            rounds = 0;
+            rounds = 1;
             prepTicks = 05;
             workTick = 20;
             restTicks = 10;
@@ -60,50 +60,53 @@ namespace PhoneApp1
             //minute = minute % 60;
 
             //txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");  
-
-            if(prepTicks>0)
-            {
-                txtblPrepare.Visibility = System.Windows.Visibility.Visible;
-                txtblGo.Visibility = System.Windows.Visibility.Collapsed;
-                txtblTime.Text = prepTicks + " Seconds Remaining";
-                prepTicks--;              
-            }
-            else if (workTick > 0)
-            {
-                txtblPrepare.Visibility = System.Windows.Visibility.Collapsed;
-                txtblGo.Visibility = System.Windows.Visibility.Visible;
-                txtblTime.Text = workTick + " Seconds Remaining";
-                workTick--;
-            }
-            else if (restTicks > 0)
-            {
-                txtblGo.Visibility = System.Windows.Visibility.Collapsed;
-                txtblRest.Visibility = System.Windows.Visibility.Visible;
-                txtblTime.Text = restTicks + " Seconds Remaining";
-                restTicks--;
-            }
-            else
-            {
-                txtblRest.Text = "Congratulations";
-                txtblTime.Text = "Times Up";
-            }
-
-               
+            //while (rounds > 0 && rounds < 9)
+            //{
+                if (prepTicks > 0)
+                {
+                    txtblPrepare.Visibility = System.Windows.Visibility.Visible;
+                    txtblGo.Visibility = System.Windows.Visibility.Collapsed;
+                    txtblTime.Text = prepTicks + " Seconds Remaining";
+                    prepTicks--;
+                }
+                else if (workTick > 0)
+                {
+                    txtblPrepare.Visibility = System.Windows.Visibility.Collapsed;
+                    txtblGo.Visibility = System.Windows.Visibility.Visible;
+                    txtblTime.Text = workTick + " Seconds Remaining";
+                    workTick--;
+                }
+                else if (restTicks > 0)
+                {
+                    txtblGo.Visibility = System.Windows.Visibility.Collapsed;
+                    txtblRest.Visibility = System.Windows.Visibility.Visible;
+                    txtblTime.Text = restTicks + " Seconds Remaining";
+                    restTicks--;
+                }
+                else
+                {
+                    txtblRest.Text = "Congratulations";
+                    txtblTime.Text = "Times Up";
+                }
+            //    rounds++;
+                
+            //}
+            //txtblRoundNo.Text = rounds.ToString();
+            
         }
    
         private void btnStop_Tap(object sender, System.Windows.Input.GestureEventArgs e)//actually the pause button
         {
-            if (timer != null)
-            {
-                timerWatch.Stop();
-            }
+            //if (prepTicks != null || workTick != null || restTicks != null)
+            //{
+            //    timerWatch.Stop();
+            //}
         }
 
         private void btnPause_Tap(object sender, System.Windows.Input.GestureEventArgs e)//actually the stop button
         {
             //set back to 00:00
-            timerWatch.Restart();
-            timerWatch.Stop();
+            
             txtblPrepare.Visibility = System.Windows.Visibility.Visible;
             txtblGo.Visibility = System.Windows.Visibility.Collapsed;
         }
