@@ -35,7 +35,7 @@
         <Grid x:Name="ContentPanel"
               Grid.Row="1" Margin="12,0,12,0">
 
-            <Button x:Name="btnBegin"
+            <!--<Button x:Name="btnBegin"
                     Content="Begin"
                     HorizontalAlignment="Center"
                     Height="74"
@@ -43,7 +43,7 @@
                     VerticalAlignment="Top" 
                     Width="184"
                     Tap="btnEditBegin_Tap"
-                    Visibility="Visible"/>
+                    Visibility="Visible"/>-->
 
             <TextBlock x:Name="txtblEditTime"
                        HorizontalAlignment="Center" 
@@ -80,7 +80,7 @@
                        FontSize="48" 
                        Visibility="Collapsed"/>
 
-            <Button x:Name="btnPause"
+            <!--<Button x:Name="btnPause"
                     Content="Stop" 
                     HorizontalAlignment="Left" 
                     Height="81" 
@@ -98,7 +98,7 @@
             	    VerticalAlignment="Top" 
             	    Width="184"
             	    Tap="btnEditStop_Tap"
-            	    Visibility="Visible"/>
+            	    Visibility="Visible"/>-->
 
             <TextBlock x:Name="txtblLable"
                        HorizontalAlignment="Center"
