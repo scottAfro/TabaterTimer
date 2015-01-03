@@ -82,13 +82,13 @@
 
             <Slider x:Name="sliderCycles"
                     HorizontalAlignment="Left"
-                    Height="97" 
+                    Height="97"                     
                     Margin="52,455,0,0" 
-                    VerticalAlignment="Top"                    
+                    VerticalAlignment="Top"                     
                     Width="326" 
                     Minimum="1"
-                    Maximum="10"                    
-                    Value="8"                    
+                    Maximum="10" 
+                    Value="8"           
                     ValueChanged="Slider_ValueChanged"/>
 
             <TextBox x:Name="txtSliderValue"
@@ -107,7 +107,7 @@
                      Height="75"
                      Margin="145,65,0,0"
                      TextWrapping="Wrap" 
-                     Text=" "
+                     Text=""
                      VerticalAlignment="Top"
                      Width="118"/>
 
@@ -116,7 +116,7 @@
             	    Height="75"
             	    Margin="145,168,0,0"
             	    TextWrapping="Wrap" 
-            	    Text=" "
+            	    Text=""
             	    VerticalAlignment="Top"
             	    Width="118"/>
 

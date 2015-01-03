@@ -15,10 +15,11 @@ namespace PhoneApp1
     public partial class startPage : PhoneApplicationPage
     { 
        long hour, minute, second, milllisecond;
-       int rounds, prepTicks, workTick, restTicks;
+       int rounds;
 
        DispatcherTimer timer;
-       
+       TimeSpan endInterval = new TimeSpan(0, 0, 5);
+       TimeSpan otherInterval = new TimeSpan(0,0,20);
 
 
        Stopwatch timerWatch = new Stopwatch(); 
@@ -30,24 +31,18 @@ namespace PhoneApp1
             minute = 0;
             second = 0;
             milllisecond = 0;            
-            rounds = 1;
-            prepTicks = 06;
-            workTick = 21;
-            restTicks = 11;
+            rounds = 1;            
         }
 
         private void btnBegin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             timerWatch.Start();
-
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             timer.Tick += timer_Tick;
             timer.Start();
 
-           btnPause.Visibility = System.Windows.Visibility.Visible;
-
-            
+           btnPause.Visibility = System.Windows.Visibility.Visible;         
             
                        
         }//end of btnBegin
@@ -55,7 +50,8 @@ namespace PhoneApp1
         private void timer_Tick(object sender, EventArgs e)
         {
             //throw new NotImplementedException();
-            if (timerWatch.Elapsed > new TimeSpan(0, 0, 0))
+            //timer timespan is more than zero, start stopwatch(get the prepare counter going)
+           if (timerWatch.Elapsed < new TimeSpan(0,0,5))
             {
                 milllisecond = timerWatch.ElapsedMilliseconds;
                 second = milllisecond / 1000;
@@ -66,19 +62,7 @@ namespace PhoneApp1
                 minute = minute % 60;
                 txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
             }
-            else if (timerWatch.Elapsed > new TimeSpan(0, 0, 4))
-            {
-                timerWatch.Restart();
-                milllisecond = timerWatch.ElapsedMilliseconds;
-                second = milllisecond / 1000;
-                milllisecond = milllisecond % 1000;
-                minute = second / 60;
-                second = second % 60;
-                hour = minute / 60;
-                minute = minute % 60;
-                txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00"); 
-            }
-            else if (timerWatch.Elapsed > new TimeSpan(0, 0, 19) && timerWatch.Elapsed < new TimeSpan(0, 0, 10))
+           else if (timerWatch.Elapsed < new TimeSpan(0, 0, 20))//get the workout counter going, 
             {
                 timerWatch.Restart();
                 milllisecond = timerWatch.ElapsedMilliseconds;
@@ -89,31 +73,24 @@ namespace PhoneApp1
                 hour = minute / 60;
                 minute = minute % 60;
                 txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
+                txtblPrepare.Visibility = System.Windows.Visibility.Collapsed;
+                txtblGo.Visibility = System.Windows.Visibility.Visible;
+            }
+            else if (timerWatch.Elapsed < new TimeSpan(0, 0, 10))
+            {
+                timerWatch.Restart();
+                milllisecond = timerWatch.ElapsedMilliseconds;
+                second = milllisecond / 1000;
+                milllisecond = milllisecond % 1000;
+                minute = second / 60;
+                second = second % 60;
+                hour = minute / 60;
+                minute = minute % 60;
+                txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
+                txtblGo.Visibility = System.Windows.Visibility.Collapsed;
             }
             else
-                txtblTime.Text = "Times Up!";
-            
-
-                    
-               // if(prepTicks > 0)
-                // {
-                //     prepTicks--;
-                //     txtblTime.Text = prepTicks + " Seconds Remaining";
-                // }                             
-                //else if (prepTicks < 1 )
-                //{
-                //    workTick--;
-                //    txtblTime.Text = workTick + " Seconds Remaining";
-                //    txtblPrepare.Visibility = System.Windows.Visibility.Collapsed;
-                //    txtblGo.Visibility = System.Windows.Visibility.Visible;
-                //}
-                //else if (workTick < 1)
-                //{
-                //    restTicks--;
-                //    txtblTime.Text = restTicks + " Seconds Remaining";
-                //    txtblGo.Visibility = System.Windows.Visibility.Collapsed;
-                //    txtblRest.Visibility = System.Windows.Visibility.Visible;
-                //}    
+                txtblTime.Text = "Times Up!";                    
         }
    
         private void btnStop_Tap(object sender, System.Windows.Input.GestureEventArgs e)//actually the pause button
