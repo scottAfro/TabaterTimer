@@ -11,15 +11,24 @@ using Microsoft.Phone.Shell;
 namespace PhoneApp1
 {
     public partial class Edit : PhoneApplicationPage
-    {
-        
+    {        
         
         public Edit()
         {
-            InitializeComponent();
-            //userPrep = int.Parse(txtPrepare.Text);
-            //userWork = int.Parse(txtWork.Text);
-            //userRest = int.Parse(txtRest.Text);
+            InitializeComponent();           
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            //base.OnNavigatedFrom(e);
+            EditPageTimer userInput = e.Content as EditPageTimer;
+            if(userInput != null)
+            {
+                userInput.userPrep = txtPrepare.Text;
+                userInput.userWork = txtWork.Text;
+                userInput.userRest = txtRest.Text;
+            }
+            
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -30,11 +39,11 @@ namespace PhoneApp1
         private void btnStartNew_Click(object sender, RoutedEventArgs e)
         {
             //Navigate to Edit Timer Routine page
-            var obj = App.Current as App;
-            obj.userPrep = txtPrepare.Text;
+           // var obj = App.Current as App;
+           // obj.userPrep = txtPrepare.Text;
            // obj.userWork = txtWork.Text;
            // obj.userRest = txtRest.Text;
-            NavigationService.Navigate(new Uri("/EditPageTimer.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/EditPageTimer.xaml", UriKind.Relative));
         }
     }
 }

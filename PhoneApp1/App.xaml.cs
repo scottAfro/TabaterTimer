@@ -17,10 +17,8 @@ namespace PhoneApp1
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
-        public string userPrep { get; set; }
-        public string userWork { get; set; }
-        public string userRest { get; set; }
-        public int userCycles { get; set; }
+       
+        
 
         /// <summary>
         /// Constructor for the Application object.

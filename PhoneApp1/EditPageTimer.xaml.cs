@@ -14,6 +14,11 @@ namespace PhoneApp1
 {
     public partial class EditPageTimer : PhoneApplicationPage
     {
+        public string userPrep { get; set; }
+        public string userWork { get; set; }
+        public string userRest { get; set; }
+        public int userCycles { get; set; }
+
         long edHour, edMinute, edSecond, edMilllisecond;
         DispatcherTimer editTimer;
         TimeSpan userInterval;
@@ -27,23 +32,28 @@ namespace PhoneApp1
             edMinute = 0;
             edSecond = 0;
             edMilllisecond = 0;
-            num = 0;
+             
+        }
+
+        private void EditPageTimerPage_Loaded(object sender, RoutedEventArgs e)
+        {
+           
         }
 
         private void btnEditBegin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            var obj = App.Current as App;
-            string abc = obj.userPrep;
-            num = Convert.ToInt32(abc);
-
-            editWatch.Start();
+        {     
+            //editWatch.Start();            
             editTimer = new DispatcherTimer();
             editTimer.Interval = new TimeSpan(0, 0, 1, 0);
             editTimer.Tick += editTimer_Tick;
-            editTimer.Start();            
+            editTimer.Start();
+            btnEditPause.Visibility = System.Windows.Visibility.Visible;
+
+            num = Convert.ToInt32(this.userPrep);      
+            txtblEditTime.Text = num + " Seconds";     
         }
 
-        void editTimer_Tick(object sender, EventArgs e)
+        private void editTimer_Tick(object sender, EventArgs e)
         {
             num--;
 
@@ -52,23 +62,10 @@ namespace PhoneApp1
                 editTimer.Stop();
                 txtblEditTime.Text = num + " Seconds";
             }
-
-
-
-            //if (TimeSpan.TryParseExact(abc, "%s", null, out userInterval))
-            //{           
-            //    edMilllisecond = editWatch.ElapsedMilliseconds;
-            //    edSecond = edMilllisecond / 1000;
-            //    edMilllisecond = edMilllisecond % 1000;
-            //    edMinute = edSecond / 60;
-            //    edSecond = edSecond % 60;
-            //    edHour = edMinute / 60;
-            //    edMinute = edMinute % 60;
-            //    txtblEditTime.Text = edMinute.ToString("00") + ":" + edSecond.ToString("00");
-            //    //throw new NotImplementedException();
-            //}
-            //else
-            //    txtblEditTime.Text = "Times Up! ";        
+            else
+            {
+                txtblEditTime.Text = "Times up";
+            }          
         }
 
         private void btnEditPause_Tap(object sender, System.Windows.Input.GestureEventArgs e)
