@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF1F9FB4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -43,7 +43,7 @@
                     VerticalAlignment="Top" 
                     Width="184"
                     Tap="btnEditBegin_Tap"
-                    Visibility="Visible"/>
+                    Visibility="Visible" Background="#FF2A2AE8"/>
 
             <TextBlock x:Name="txtblEditTime"
                        HorizontalAlignment="Center" 
@@ -58,14 +58,14 @@
 
             <TextBlock x:Name="txtblPrepare"
                        HorizontalAlignment="Center"
-                       Height="73"
-                       Margin="99,29,89,0"                       
+                       Height="125"
+                       Margin="58,29,51,0"                       
                        TextWrapping="Wrap"
                        Text="Prepare!" 
                        VerticalAlignment="Top"
-                       Width="268" 
+                       Width="347" 
                        TextAlignment="Center" 
-                       FontSize="48" 
+                       FontSize="68" 
                        Visibility="Visible"/>
 
             <TextBlock x:Name="txtblRest"
@@ -88,7 +88,7 @@
                     VerticalAlignment="Top"
                     Width="171"
                     Tap="btnEditPause_Tap"
-                    Visibility="Collapsed"/>
+                    Visibility="Collapsed" Background="#FF2A2AE8"/>
 
             <Button x:Name="btnEditStop_Copy"
             	    Content="Pause"
@@ -98,7 +98,7 @@
             	    VerticalAlignment="Top" 
             	    Width="184"
             	    Tap="btnEditStop_Tap"
-            	    Visibility="Visible"/>
+            	    Visibility="Visible" Background="#FF2A2AE8"/>
 
             <TextBlock x:Name="txtblLable"
                        HorizontalAlignment="Center"
@@ -143,6 +143,15 @@
                        TextAlignment="Center"
                        FontSize="48"
                        Visibility="Collapsed"/>
+
+            <!--<ProgressBar x:Name="proBarTime"
+                         HorizontalAlignment="Left" 
+                         Height="67"
+                         Margin="78,353,0,0"
+                         VerticalAlignment="Top" 
+                         Width="327"/>-->
+
+
         </Grid>
     </Grid>
 

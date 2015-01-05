@@ -27,6 +27,7 @@ namespace PhoneApp1
                 userInput.userPrep = txtPrepare.Text;
                 userInput.userWork = txtWork.Text;
                 userInput.userRest = txtRest.Text;
+                userInput.userRounds = txtRound.Text;
             }
             
         }
@@ -67,3 +68,48 @@ namespace PhoneApp1
 //    txtblGo.Visibility = System.Windows.Visibility.Collapsed;
 //    txtblRest.Visibility = System.Windows.Visibility.Visible;
 //}    
+
+//if ()// if its 5sec
+//{
+//    milllisecond = timerWatch.ElapsedMilliseconds;
+//    second = milllisecond / 1000;
+//    milllisecond = milllisecond % 1000;
+//    minute = second / 60;
+//    second = second % 60;
+//    hour = minute / 60;
+//    minute = minute % 60;
+//    txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
+//}
+//else if (timerWatch.Elapsed >= new TimeSpan(0, 0, 10) && timerWatch.Elapsed < new TimeSpan(0, 0, 21))//more than 4sec
+//{
+//    timerWatch.Restart();
+
+//    milllisecond = timerWatch.ElapsedMilliseconds;
+//    second = milllisecond / 1000;
+//    milllisecond = milllisecond % 1000;
+//    minute = second / 60;
+//    second = second % 60;
+//    hour = minute / 60;
+//    minute = minute % 60;
+//    txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
+
+//    txtblPrepare.Visibility = System.Windows.Visibility.Collapsed;
+//    txtblGo.Visibility = System.Windows.Visibility.Visible;
+//}
+//else if (timerWatch.Elapsed < new TimeSpan(0, 0, 21))
+//{
+//    timerWatch.Restart();
+
+//    milllisecond = timerWatch.ElapsedMilliseconds;
+//    second = milllisecond / 1000;
+//    milllisecond = milllisecond % 1000;
+//    minute = second / 60;
+//    second = second % 60;
+//    hour = minute / 60;
+//    minute = minute % 60;
+
+//    txtblTime.Text = minute.ToString("00") + ":" + second.ToString("00");
+//    txtblGo.Visibility = System.Windows.Visibility.Collapsed;
+//}
+//else
+//    txtblTime.Text = "Times Up!";

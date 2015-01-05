@@ -10,12 +10,11 @@
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Background="#FF29B8AB" Foreground="Black">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF1F9FB4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -50,7 +49,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel"
 			Grid.Row="0"
-			Margin="12,17,0,28">
+			Margin="12,17,0,28" Background="#FF1F9FB4">
             <TextBlock Text="Tabata Timer"                       
 				       Margin="9,-7,0,0"
 				       Style="{StaticResource PhoneTextTitle1Style}"
@@ -60,7 +59,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel"
 			Grid.Row="1"
-			Margin="12,0,12,0">
+			Margin="12,0,12,0" Background="#FF1F9FB4">
             <Button x:Name="btnStart"
 				Content="Start Routine" 
 				HorizontalAlignment="Left" 
@@ -68,7 +67,7 @@
 				Margin="10,56,0,0"
 				VerticalAlignment="Top" 
 				Width="211"
-				Tap="btnStart_Tap"/>
+				Tap="btnStart_Tap" Background="#FF2A2AE8"/>
 
             <Button x:Name="btnEdit"
 				Content="Edit Routine"
@@ -77,7 +76,7 @@
 				Margin="235,56,0,0" 
 				VerticalAlignment="Top"
 				Width="211"				
-                Click="btnEdit_Click"/>
+                Click="btnEdit_Click" Background="#FF2A2AE8"/>
             
             <Button x:Name="btnMusic"
                     Content="Music"
@@ -85,7 +84,7 @@
                     Height="195"
                     Margin="235,319,0,0"
                     VerticalAlignment="Top"
-                    Width="211"/>
+                    Width="211" Background="#FF2A2AE8"/>
             
             <Button x:Name="btnOneDrive"
                     Content="One Drive" 
@@ -94,7 +93,7 @@
                     Margin="10,319,0,0"
                     VerticalAlignment="Top" 
                     Width="211" 
-                    Click="btnOneDrive_Click"/>
+                    Click="btnOneDrive_Click" Background="#FF2A2AE8"/>
         </Grid>
 
     </Grid>

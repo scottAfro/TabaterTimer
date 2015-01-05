@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF1F9FB4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -43,14 +43,14 @@
                     VerticalAlignment="Top" 
                     Width="184"
                     Tap="btnBegin_Tap"
-                    Visibility="Visible"/>
+                    Visibility="Visible" Background="#FF2A2AE8"/>
 
             <TextBlock x:Name="txtblTime"
                        HorizontalAlignment="Center" 
                        Height="86"
                        Margin="58,241,51,0" 
                        TextWrapping="Wrap" 
-                       Text=" "
+                       Text="00:00"
                        VerticalAlignment="Top"
                        Width="347" 
                        FontSize="64"
@@ -68,7 +68,7 @@
                        FontSize="48" 
                        Visibility="Visible"/>
 
-            <TextBlock x:Name="txtblRest"
+            <!--<TextBlock x:Name="txtblRest"
                        HorizontalAlignment="Center"
                        Height="73"
                        Margin="141,29,139,0"                       
@@ -78,7 +78,7 @@
                        Width="176" 
                        TextAlignment="Center" 
                        FontSize="48" 
-                       Visibility="Collapsed"/>
+                       Visibility="Collapsed"/>-->
 
             <Button x:Name="btnPause"
                     Content="Stop" 
@@ -88,7 +88,7 @@
                     VerticalAlignment="Top"
                     Width="171"
                     Tap="btnPause_Tap"
-                    Visibility="Collapsed"/>
+                    Visibility="Collapsed" Background="#FF2A2AE8"/>
 
             <Button x:Name="btnStop_Copy"
             	    Content="Pause"
@@ -98,19 +98,9 @@
             	    VerticalAlignment="Top" 
             	    Width="184"
             	    Tap="btnStop_Tap"
-            	    Visibility="Visible"/>
+            	    Visibility="Visible" Background="#FF2A2AE8"/>
 
-            <TextBlock x:Name="txtblLable"
-                       HorizontalAlignment="Center"
-                       Height="73"
-                       Margin="10,81,0,0"                       
-                       TextWrapping="Wrap"
-                       Text="GO!" 
-                       VerticalAlignment="Top"
-                       Width="268" 
-                       TextAlignment="Center" 
-                       FontSize="48"
-                       Visibility="Collapsed"/>
+            
 
             <TextBlock HorizontalAlignment="Left"
                        Height="63" 
@@ -127,6 +117,7 @@
                        Margin="123,173,0,0" 
                        TextWrapping="Wrap" 
                        Text="1"
+                       TextAlignment="Center"
                        FontSize="34"
                        VerticalAlignment="Top"
                        Width="37"

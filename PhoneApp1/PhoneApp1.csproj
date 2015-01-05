@@ -186,6 +186,12 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Tiles\T159.png" />
+    <Content Include="Assets\Tiles\T336.png" />
+    <Content Include="Assets\Tiles\T691.png" />
+    <Content Include="Assets\Tiles\watch159.png" />
+    <Content Include="Assets\Tiles\watch336.png" />
+    <Content Include="Assets\Tiles\watch691.png" />
     <Content Include="Assets\WideLogo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -198,10 +204,6 @@
     <Reference Include="Microsoft.Advertising.Mobile, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="microsoft.advertising.mobile.ui, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\circle-add-128.png" />
-    <Resource Include="Assets\minus-5-128.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Media\" />

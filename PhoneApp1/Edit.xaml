@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF1F9FB4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -32,8 +32,8 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" 
               Grid.Row="1"
-              Margin="10,0,14,0" 
-              Background="#FF88B255">
+              Margin="14,0,10,0" 
+              Background="#FF1F9FB4">
             <Button x:Name="btnStartNew"
                     Content="Start" 
                     HorizontalAlignment="Center"
@@ -42,22 +42,22 @@
                     VerticalAlignment="Top"
                     Width="180" 
                     FontSize="28"
-                    Click="btnStartNew_Click"/>
+                    Click="btnStartNew_Click" Background="#FF2A2AE8"/>
 
             <TextBlock HorizontalAlignment="Left"
-                       Height="49" 
-                       Margin="10,90,0,0" 
+                       Height="62" 
+                       Margin="0,77,0,0" 
                        TextWrapping="Wrap" 
                        Text="Prepare:"
-                       FontSize="28"
+                       FontSize="32"
                        VerticalAlignment="Top" 
-                       Width="130"/>
+                       Width="130" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" 
                        Height="53"
                        Margin="10,190,0,0"
                        TextWrapping="Wrap" 
                        Text="Work:" 
-                       FontSize="28"
+                       FontSize="32"
                        VerticalAlignment="Top" 
                        Width="130"/>
             <TextBlock HorizontalAlignment="Left"
@@ -65,7 +65,7 @@
                        Margin="10,284,0,0"
                        TextWrapping="Wrap"
                        Text="Rest:" 
-                       FontSize="28"
+                       FontSize="32"
                        VerticalAlignment="Top" 
                        Width="130"/>
             <TextBlock HorizontalAlignment="Left"
@@ -73,34 +73,20 @@
                        Margin="10,396,0,0" 
                        TextWrapping="Wrap" 
                        Text="Cycles:" 
-                       FontSize="28"
+                       FontSize="32"
                        VerticalAlignment="Top"
                        Width="130"/>
 
-
-
-
-            <Slider x:Name="sliderCycles"
-                    HorizontalAlignment="Left"
-                    Height="97"                     
-                    Margin="52,455,0,0" 
-                    VerticalAlignment="Top"                     
-                    Width="326" 
-                    Minimum="1"
-                    Maximum="10" 
-                    Value="8"           
-                    ValueChanged="Slider_ValueChanged"/>
-
-            <TextBox x:Name="txtSliderValue"
+            <TextBox x:Name="txtS"
                      HorizontalAlignment="Left" 
                      Height="67" 
                      Margin="145,378,0,0"
                      TextWrapping="Wrap"
-                     Text="{Binding Value, ElementName=sliderCycles}"
+                     Text=""
                      VerticalAlignment="Top" 
-                     Width="80"
-                     IsReadOnly="True"
-                     Opacity="100"/>
+                     Width="118"                     
+                     Opacity="100" 
+                     TextAlignment="Right"/>
 
             <TextBox x:Name="txtPrepare"
                      HorizontalAlignment="Left" 
@@ -109,7 +95,8 @@
                      TextWrapping="Wrap" 
                      Text=""
                      VerticalAlignment="Top"
-                     Width="118"/>
+                     Width="118" 
+                     TextAlignment="Right"/>
 
             <TextBox x:Name="txtWork"
                     HorizontalAlignment="Left" 
@@ -118,7 +105,7 @@
             	    TextWrapping="Wrap" 
             	    Text=""
             	    VerticalAlignment="Top"
-            	    Width="118"/>
+            	    Width="118" TextAlignment="Right"/>
 
             <TextBox x:Name="txtRest" 
                     HorizontalAlignment="Left" 
@@ -127,7 +114,7 @@
             	    TextWrapping="Wrap" 
             	    Text=" "
             	    VerticalAlignment="Top"
-            	    Width="118"/>
+            	    Width="118" TextAlignment="Right"/>
 
             <TextBlock  HorizontalAlignment="Left"
                         Height="49"
@@ -140,7 +127,7 @@
             <TextBlock FontSize="28"
                         HorizontalAlignment="Left"
                         Height="49" 
-                        Margin="263,190,0,0" 
+                        Margin="263,194,0,0" 
                         TextWrapping="Wrap"
                         Text="Seconds"
                         VerticalAlignment="Top"
@@ -148,11 +135,19 @@
             <TextBlock FontSize="28"
                         HorizontalAlignment="Left"
                         Height="49"
-                        Margin="263,284,0,0" 
+                        Margin="263,288,0,0" 
                         TextWrapping="Wrap" 
                         Text="Seconds"
                         VerticalAlignment="Top"
                         Width="178"/>
+            <TextBlock FontSize="28"
+            	        HorizontalAlignment="Left"
+            	        Height="49"
+            	        Margin="263,394,0,0" 
+            	        TextWrapping="Wrap" 
+            	        Text="Rounds"
+            	        VerticalAlignment="Top"
+            	        Width="114"/>
 
         </Grid>
     </Grid>
