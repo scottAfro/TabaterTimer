@@ -77,20 +77,12 @@
 				VerticalAlignment="Top"
 				Width="211"				
                 Click="btnEdit_Click" Background="#FF2A2AE8"/>
-            
-            <Button x:Name="btnMusic"
-                    Content="Music"
-                    HorizontalAlignment="Left"
-                    Height="195"
-                    Margin="235,319,0,0"
-                    VerticalAlignment="Top"
-                    Width="211" Background="#FF2A2AE8"/>
-            
+
             <Button x:Name="btnOneDrive"
                     Content="One Drive" 
                     HorizontalAlignment="Left"
                     Height="195"
-                    Margin="10,319,0,0"
+                    Margin="105,308,0,0"
                     VerticalAlignment="Top" 
                     Width="211" 
                     Click="btnOneDrive_Click" Background="#FF2A2AE8"/>
